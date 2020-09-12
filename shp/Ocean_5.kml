@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="Ocean_5" id="Ocean_5">
+	<SimpleField name="ORIG_NAME" type="string"></SimpleField>
+</Schema>
+<Folder><name>Ocean_5</name>
+  <Placemark>
+	<name>Islas Marias</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Ocean_5">
+		<SimpleData name="ORIG_NAME">Islas Marias - Zona de Amortiguamiento</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-106.267049262,20.9670183700001 -107.050494821,21.7003284460001 -106.667106845,22.066971632 -105.900352695,21.3336564150001 -106.267049262,20.9670183700001</coordinates></LinearRing></outerBoundaryIs><innerBoundaryIs><LinearRing><coordinates>-106.390403031,21.4103158700001 -106.35373169,21.4569776290001 -106.373738726,21.4869809560001 -106.460412313,21.5003126910001 -106.503753079,21.466981015 -106.48708822,21.4469812350001 -106.390403031,21.4103158700001</coordinates></LinearRing></innerBoundaryIs><innerBoundaryIs><LinearRing><coordinates>-106.217046553,21.2836553590001 -106.217047412,21.3336533 -106.26038792,21.3336539620001 -106.293724918,21.3203192570001 -106.270390626,21.283656303 -106.217046553,21.2836553590001</coordinates></LinearRing></innerBoundaryIs><innerBoundaryIs><LinearRing><coordinates>-106.658740675,21.739218527 -106.657106887,21.74030774 -106.670444274,21.776971953 -106.687108965,21.7769724840001 -106.690443676,21.7603086140001 -106.707116298,21.7436452330001 -106.707116404,21.736979282 -106.683320726,21.7290463350001 -106.682931676,21.7289166350001 -106.679762712,21.7278601720001 -106.677106267,21.7269745730001 -106.658740675,21.739218527</coordinates></LinearRing></innerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>Isla Guadalupe</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Ocean_5">
+		<SimpleData name="ORIG_NAME">Isla Guadalupe</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-118.017708708,28.6677779440001 -118.634375941,28.6677780410001 -118.634376195,29.3844449460001 -118.017709059,29.3844272430001 -118.017708708,28.6677779440001</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>Archipelago de Revillagigedo</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Ocean_5">
+		<SimpleData name="ORIG_NAME">Archipelago de Revillagigedo - Zona Nucleo</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-110.078092575,20.0086307530001 -110.078092575,17.6552333830001 -115.471414566,17.6552333830001 -115.471414565,20.0086307530001 -110.078092575,20.0086307530001</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>Arrecife Alacranes</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Ocean_5">
+		<SimpleData name="ORIG_NAME">Arrecife Alacranes - Zona de Amortiguamiento</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-90.0016910231946,22.4609707174863 -90.0018659779999,22.4612757140001 -90.0079486879999,22.5654846570001 -89.9716861409999,22.6550187700001 -89.9046433429999,22.730240322 -89.8227606879999,22.7836567520001 -89.7216822389999,22.7998464390001 -89.6790138059999,22.793162925 -89.5873508579999,22.7569746680001 -89.5066080719999,22.6994035790001 -89.4505032499999,22.6180143480001 -89.4504159240543,22.6178255177839 -89.45,22.6172222220001 -89.4159350115935,22.5432653386174 -89.4080744249999,22.5262679130001 -89.408068865301,22.5261875208567 -89.4077777779999,22.525555555 -89.4011111109999,22.4275 -89.4238888889999,22.326944444 -89.4741666669999,22.2411111110001 -89.5533333329999,22.1836111110001 -89.6463888879999,22.1502777780001 -89.746944444,22.1666666670001 -89.8333333329999,22.2183333340001 -89.9022222209999,22.2891666660001 -89.9516666669999,22.3733333340001 -90.0016666669999,22.460555555 -90.0016910231946,22.4609707174863</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>Banco Chinchorro</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Ocean_5">
+		<SimpleData name="ORIG_NAME">Banco Chinchorro</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-87.4732444819999,18.3612068990001 -87.4743445286817,18.7610451773824 -87.4744893109999,18.813085173 -87.3700759346012,18.813282778335 -87.2004792,18.8136171100001 -87.2004791846339,18.8136037450899 -87.2004697209999,18.8136037630001 -87.1999488059999,18.3616887100001 -87.4732320699999,18.361187338 -87.4732321244845,18.3612069217226 -87.4732444819999,18.3612068990001</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+</Folder>
+</Document></kml>
