@@ -1,0 +1,71 @@
+---
+title: "Interactive visualization of VMS tracking data of fishing vessels"
+author: "Fabio Favoretto"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  bookdown::html_document2:
+    code_folding: hide
+    code_download: true
+    theme: paper
+    toc: true
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+
+library(tidyverse)
+library(rgdal)
+library(sf)
+library(lubridate)
+library(mixtools)
+library(moveVis)
+library(RCurl)
+
+devtools::source_url("https://raw.githubusercontent.com/Fabbiologia/VMS_Revillagigedo/master/gfw_themes.R")
+
+projcrs <- "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"
+
+
+
+mpa_tracks <- data.table::fread(getURL("https://raw.githubusercontent.com/Fabbiologia/VMS_Revillagigedo/master/data/for_interactive_viz.csv"), header = T) %>% 
+        mutate(date=as.POSIXct(date, format = "%Y-%m-%d %H:%M:%S", tz = "UTC")) 
+
+
+mex <- readOGR("shp/Estados.kml")
+mpa <- readOGR("shp/Ocean_5.kml")
+eez <- readOGR("shp/eez_Mexico.kml")
+
+
+
+
+```
+
+
+```{r interactive, fig.height=10, fig.width=18, fig.align='center'}
+
+p <- mpa_tracks %>% 
+        ggplot()+
+        geom_polygon(data = mex, aes(x = long, y = lat, group=group), colour = "grey", fill = "grey", alpha = .3)+
+        geom_polygon(data = eez, aes(x = long, y = lat, group=group), fill = "#68829E", alpha=.3)+
+        geom_polygon(data = mpa, aes(x = long, y = lat, group=group), colour = "red", fill = NA, alpha = .3)+
+        geom_path(data = filter(mpa_tracks, overall_EM_beh == "not_hauling"), aes(x=lon_bin, y=lat_bin, key=name, labels=date), col = "gray80", size = 1)+
+        geom_point(data = filter(mpa_tracks, overall_EM_beh == "not_hauling"), aes(x=lon_bin, y=lat_bin, key=name, labels=date), col = "white", size = 1)+
+        geom_point(data = filter(mpa_tracks, overall_EM_beh == "hauling"), aes(x=lon_bin, y=lat_bin, key=name, labels=date), colour = "red", size = 2, alpha = .3)+
+        coord_quickmap()+
+        coord_sf(xlim = c(-116,-109), ylim = c(17,21))+
+        facet_grid(~year)+
+        theme_seaecolab()
+
+plotly::ggplotly(p)
+```
+
+
+
+Red dots are suspicious activities, white dots are logging position (each hour), grey lines are inferred track of the fishing vessel. 
+
+The Revillagigedo protection polygon is a no fishing zone and all fishing activities are prohibited. 
